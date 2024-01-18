@@ -82,6 +82,9 @@ background:linear-gradient(180deg,rgba(41, 32, 32, 0.788),rgba(119, 7, 35, 0.801
   align-items:center;
  
 }
+button{
+  cursor:pointer;
+}
 button:hover{
   background-color:#ffcce0;
 }
@@ -95,6 +98,8 @@ button:hover{
 }
 a{
   text-decoration:none;
+  padding:15px 0px;
+  font-size:1rem;
 }
 
 
