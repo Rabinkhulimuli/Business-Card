@@ -1,4 +1,10 @@
+import React from 'react'
 export default function MainButton(){
+    const [list,setList]=React.useState(false)
+    function Game_list(){
+            setList((prev)=> !prev)
+    }
+    const styles={display:list?"block":"none"}
     return(
         <main>
         <button className="btn-com" >
@@ -22,6 +28,22 @@ export default function MainButton(){
         <a className="datadet" href="https://youtube.com/@aeror5579?si=gC1A98L8awG-rqqA"
             >View my Youtube videos</a>
         </button>
+       {/*  <button className="btn-com" >
+        <img className="phone" src="/image/game-logo.png"/>
+        <a className="datadet" href="https://youtube.com/@aeror5579?si=gC1A98L8awG-rqqA"
+            >Play Games</a>
+        </button> */}
+        <div className="btn-game">
+            <button className="btn-co" onClick={Game_list}>
+                <img className="img-game" src="/image/game-logo.png"/>
+                <p className="p-game">Play Games</p>
+            </button>
+            <div style={styles} >
+                <a className="a-game" href="https://lotterygameforfun.netlify.app/">Card game</a>
+                <a className="a-game" href="https://tanzigame.netlify.app/">Tenzie game</a>
+            </div>
+        </div>
+
         </main>
     )
 }
