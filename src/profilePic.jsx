@@ -2,6 +2,7 @@ function ProfilePic(){
     return (
         <nav className='headbox'>
                 <header className='head--pic'>
+                    <div className="blnk"></div>
                         <img className="big-profile" src="../image/R-k.jpeg" alt="" />
                         <div className="small-pp">
                                 <img className='profile--pic' src="../image/Rkimg.jpeg"/>

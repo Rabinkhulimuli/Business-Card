@@ -10,6 +10,13 @@ body{
   box-shadow: 0px 2px 8px #d4cbcb9c;
   border-radius:10px;
 }
+@keyframes colorme {
+  0%{border-top-color:rgb(241, 238, 53);}
+  25%{border-right-color:aliceblue;}
+  50%{border-bottom-color:rgb(184, 236, 38);}
+  100%{border-left-color:rgb(0, 183, 255);}
+  
+}
 .profile--pic{
   margin-left:15px;
   width:100%;
@@ -19,6 +26,12 @@ body{
   border:5px solid rgba(170, 19, 190, 0.61);
   border-radius:10px;
   box-shadow: 0px 2px 8px rgba(212, 203, 203, 0.61);
+  animation-name:colorme;
+  animation-duration:2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  position:relative;
 }
 .name{
   margin:0;
@@ -34,14 +47,22 @@ body{
   box-shadow: 0px 2px 8px rgba(202, 198, 198, 0.61);
   color:#dad1d4 ;
   font-weight:700;
+  position:relative;
   letter-spacing: 1.5px;
   background-color:rgba(65, 41, 5, 0.322);
   border-radius:10px;
   transition:background 2s, transform 2s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation:name 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes name {
+ 0%{background:linear-gradient(180deg,rgba(41, 32, 32, 0.788),rgba(119, 7, 35, 0.801));}
+ 50%{background:linear-gradient(180deg,rgba(78, 47, 47, 0.788),rgba(119, 7, 35, 0.801));}
+ 100%{background:linear-gradient(180deg,rgba(85, 46, 46, 0.788),rgba(119, 7, 35, 0.801));}
 }
 .pdetail:hover{
-transform:scale(1.1);
+transform:scale(1.02);
 background:linear-gradient(180deg,rgba(41, 32, 32, 0.788),rgba(119, 7, 35, 0.801));
 }
 
@@ -54,6 +75,29 @@ background:linear-gradient(180deg,rgba(41, 32, 32, 0.788),rgba(119, 7, 35, 0.801
   font-size:1.2rem;
   box-shadow: 0px 2px 8px rgba(212, 203, 203, 0.61);
 }
+/* .blnk{
+  position:relative;
+  width:50px;
+  height:50px;
+  
+  background:linear-gradient(180deg,rgba(41, 32, 32, 0.788),rgba(119, 7, 35, 0.801));
+  animation:blnkan 8s ease-in ;
+}
+@keyframes blnkan {
+  0%{left:0px;width:100px;}
+  8%{left:100px;top:0px;}
+  16%{left:100px; top:250px;}
+  24%{left:350px;top:250px;}
+  32%{left:350px;top:0px;}
+  40%{left:0px;top:0px;}
+  48%{left:0px;}
+  56%{left:100px;top:0px;}
+  64%{left:100px; top:50px;}
+  72%{left:350px;top:50px;}
+  80%{left:350px;top:0px;}
+  100%{left:0px;top:0px;}
+
+} */
 /*other section */
 .btn-com{
   width:100%;
