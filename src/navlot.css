@@ -1,22 +1,26 @@
+*{
+    box-sizing: border-box;
+    color:rgba(54, 3, 3, 0.959);
+    
+}
 .newpic{
     width:250px;
-    height:400px;
+    height:430px;
     display:block;
     margin:5px;
 }
 .navNew{
     display:grid;
     grid-template-columns: 60px 260px auto;
-    border:2px solid blue;
-    box-shadow: 0px 0px 4px 2px rgb(235, 61, 133);
+   
     
 }
 .navNew-i{
+    height:430px;
     display:flex;
     flex-direction:column;
     background-color:red;
     margin:5px;
-    row-gap:20px;
     width:fit-content;
 }
 .navNew-i img{
@@ -28,12 +32,67 @@
     border-radius:50px;
 }
 .detail-box{
-    background-color: rgba(20, 204, 91, 0.479);
+    background-color: rgba(217, 113, 238, 0.479);
     padding:5px;
+    height:430px;
+    margin:5px;
+    
+    
+}
+@keyframes shake{
+ 0% {left:0;top:0;}
+ 50%{left:200px;top:0;}
+ 100%{left:0px;top:0;}
 }
 .switch-i{
     margin:10px;
-    margin-left:50%;
+    margin-left:55px;
     padding:2px;
     border:5px solid rgb(219, 25, 155);
+    animation-name: shake;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-duration:10s;
+}
+@media only screen and (max-width:600px){
+    .newpic{
+        position:absolute;
+        margin-left:62px;
+        
+    }
+    @keyframes colorme {
+        0%{border-top-color:lightcoral;}
+        25%{border-right-color:rgb(255, 255, 240);}
+        50%{border-bottom-color:rgb(190, 38, 236);}
+        100%{border-left-color:rgb(255, 0, 64);}
+        
+      }
+    .detail-box{
+        position:relative;
+        left: 30px;
+        right:0px;
+        width:fit-content;
+        height:300px;
+        margin-top:70px;
+        border:5px solid;
+        border-radius:20px;
+        overflow-y: scroll;
+        animation-name:colorme;
+        animation-duration:2s;
+        animation-timing-function:cubic-bezier(1, 0, 0, 1);
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+        position:relative;
+    }
+    
+    .detail-box::-webkit-scrollbar{
+        display:none;
+    }
+    @keyframes colorme {
+  0%{border-top-color:rgb(241, 238, 53);}
+  25%{border-right-color:aliceblue;}
+  50%{border-bottom-color:rgb(184, 236, 38);}
+  100%{border-left-color:rgb(0, 183, 255);}
+  
+}
 }
