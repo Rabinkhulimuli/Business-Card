@@ -17,7 +17,7 @@ export default function MainButton(){
         </button>
         <button className="btn-com" >
         <img className="phone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ63xmdyqloMwBqqPbu6O9Fq1CX-Tdjq8dww&usqp=CAU"/>
-        <p className="datadet">Visit my website</p>
+        <a className="datadet"href="https://portfoilo-sample.netlify.app/" >Visit my website</a>
         </button>
         <button className="btn-com" >
         <img className="phone" src="https://cdn3d.iconscout.com/3d/free/preview/tiktok-4727413-3925996@0.png?f=webp&h=700"/>
